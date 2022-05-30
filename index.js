@@ -40,7 +40,7 @@ function randomSpiral( eval1, eval2, storeNote, wLoop, noteNum, timeBetween, tim
 		
 			resObj.result = resObj.result + ","
 			dataConvert(storeNote, resObj);
-			timeAt = Number(startTime) + timeBetween * (wLoop);
+			timeAt = Math.round(Number(startTime) + timeBetween * (wLoop))
 			resObj.result = resObj.result +  String(timeAt);
 		eval1s[wLoop] = storeNote;
 		eval1 = storeNote;
@@ -64,7 +64,7 @@ function randomJump(eval1, eval2, storeNote, wLoop, noteNum, timeBetween, timeAt
 	
 			resObj.result = resObj.result + ","
 			dataConvert(storeNote, resObj);
-			timeAt = Number(startTime) + timeBetween * (wLoop);
+			timeAt = Math.round(Number(startTime) + timeBetween * (wLoop));
 			resObj.result = resObj.result +  String(timeAt);
 	eval1s[wLoop] = storeNote;
 	eval1 = storeNote;
