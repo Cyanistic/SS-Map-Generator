@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="myLabel"> SS Map Generator</label><br>
+    <label id="bpmText"> BPM:</label>
+    <input type="text" id="bpmValue"><br>
+    <label id="divisorText"> Divisor:</label>
+    <input type="text" id="divisorValue"><br>
+    <label id="timeText"> Length (in seconds):</label>
+    <input type="text" id="timeValue"><br>
+    <label id="startText">Time to place first note (in miliseconds):</label>
+    <input type="text" id="startValue"><br>
+    <label id="audioText">Audio ID:</label>
+    <input type="text" id="audioValue"><br>
+    <label for="jump" id="jumpLabel">Jump</label>
+    <input type="radio" id="jump" value="jump" name="mapType">
+    </label><br>
+    <label for="spiral" id="spiralLabel">Spiral
+    <input type="radio" id="spiral" value="spiral" name="mapType">
+    </label><br><br>
+    <button type="button" id="myButton">Generate</button><br>
+    <label tye="text" id="resultText"></label>
+    <script src="index.js"></script>
+</body>
+</html>
