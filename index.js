@@ -74,6 +74,19 @@ function randomJump(eval1, eval2, storeNote, wLoop, noteNum, timeBetween, timeAt
 	}
 }
 
+function randomPoo(storeNote, wLoop, noteNum, timeBetween, timeAt, resObj, startTime)
+{
+	while (wLoop < noteNum)
+	{
+			storeNote = Math.floor(Math.random()*10000%9)
+			resObj.result = resObj.result + ","
+			dataConvert(storeNote, resObj);
+			timeAt = Math.trunc(Math.round(Number(startTime) + timeBetween * (wLoop)));
+			resObj.result = resObj.result +  String(timeAt);
+			wLoop++;
+	}
+}
+
 function dataConvert(storeNote, result)
 {
 	let data1 = [0,0,0,1,1,1,2,2,2]
@@ -104,11 +117,15 @@ document.getElementById("myButton").onclick = function(){
 		randomJump(eval1, eval2, storeNote, wLoop, noteNum, timeBetween, timeAt, eval1s, jumpNote, resObj, startTime)
     }
 
-    else
+    else if (document.getElementById("spiral").checked ==true)
     {
 		eval2 = Math.floor((Math.random()*10000) % 12)
 		randomSpiral( eval1, eval2, storeNote, wLoop, noteNum, timeBetween, timeAt, eval1s, spiralNote, resObj, startTime)
     }
+	else
+	{
+		randomPoo(storeNote, wLoop, noteNum, timeBetween, timeAt, resObj, startTime)
+	}
 
 	document.getElementById("resultText").innerHTML = resObj.result
 
